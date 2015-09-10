@@ -12,5 +12,5 @@ WORKDIR /root/influxdb
 RUN rpm -ivh influxdb.x86_64.rpm
 EXPOSE 8083 8086 8088
 #CMD /bin/bash
-ENTRYPOINT ["/opt/influxdb/versions/0.9.2/influxd"]
+ENTRYPOINT ["/opt/influxdb/versions/0.9.2.1/influxd"]
 CMD ["--help"]
