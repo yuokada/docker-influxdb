@@ -1,5 +1,6 @@
 # data source
 influxdb:
+  #image: yuokada/influxdb
   build: influxdb
   #volumes_from:
   #  - data-influxdbs
@@ -11,6 +12,8 @@ influxdb:
 # graph tool
 grafana:
   build: grafana
+  volumes:
+    - ./cache:/var/cache/yum
   links:
     - influxdb:influxdb
   ports:
