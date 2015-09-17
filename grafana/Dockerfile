@@ -5,9 +5,10 @@ FROM centos:centos6
 # grafana
 RUN mkdir /root/grafana
 WORKDIR /root/grafana
-RUN yum install -y fontconfig
+RUN yum update -y && yum install -y fontconfig
 ADD https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.3-1.x86_64.rpm /root/grafana/grafana.x86_64.rpm
-RUN rpm -ivh grafana.x86_64.rpm && rm *.rpm
+RUN rpm -ivh grafana.x86_64.rpm
+run rm *.rpm
 #RUN /sbin/chkconfig --add grafana-server
 #RUN /sbin/service grafana-server start
 
