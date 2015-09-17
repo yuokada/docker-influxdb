@@ -1,0 +1,17 @@
+# data source
+influxdb:
+  build: influxdb
+  #volumes_from:
+  #  - data-influxdbs
+  ports:
+    - "18083:8083"
+    - "18086:8086"
+    - "18088:8088"
+  command: run
+# graph tool
+grafana:
+  build: grafana
+  links:
+    - influxdb:influxdb
+  ports:
+    - "13000:3000"
