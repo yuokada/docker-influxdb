@@ -9,6 +9,7 @@ RUN rpm -ivh influxdb.x86_64.rpm && rm *.rpm
 
 EXPOSE 8083 8086 8088
 
+VOLUME ["/var/opt/influxdb"]
 #CMD /bin/bash
-ENTRYPOINT ["/opt/influxdb/versions/0.9.4.1/influxd"]
+ENTRYPOINT ["/opt/influxdb/versions/0.9.4.1/influxd", "-config", "/etc/opt/influxdb/influxdb.conf"]
 CMD ["--help"]
