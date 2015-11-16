@@ -11,4 +11,4 @@ EXPOSE 8083 8086 8088
 
 VOLUME ["/var/opt/influxdb"]
 ENTRYPOINT ["/usr/bin/influxd", "-config", "/etc/influxdb/influxdb.conf"]
-CMD["--help"]
+CMD ["--help"]
