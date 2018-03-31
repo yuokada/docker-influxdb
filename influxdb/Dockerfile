@@ -1,5 +1,5 @@
 #FROM centos:latest
-FROM centos:centos6
+FROM centos:centos7
 
 RUN mkdir /root/influxdb
 ADD https://dl.influxdata.com/influxdb/releases/influxdb-1.5.1.x86_64.rpm /root/influxdb/influxdb.x86_64.rpm

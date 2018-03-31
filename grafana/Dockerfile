@@ -1,6 +1,6 @@
 #FROM centos:latest
 # https://github.com/grafana/grafana-docker/blob/master/Dockerfile
-FROM centos:centos6
+FROM centos:centos7
 
 # grafana
 RUN mkdir /root/grafana
